@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.zhenglin.tradeplatform.grpc.fundaccount";
+option java_outer_classname = "FundAccountServiceProto";
+
+service FundAccountService {
+        rpc checkFundAccount (CheckFundAccountRequest) returns (CheckFundAccountResponse) {
+    }
+}
+
+message CheckFundAccountRequest{
+    string fundAccountName = 1;
+    string password = 2;
+}
+
+
+message CheckFundAccountResponse{
+    string message = 1;
+}

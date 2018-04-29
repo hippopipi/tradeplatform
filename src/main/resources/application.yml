@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: local-grpc-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/tradeplatform?characterEncoding=utf8&useSSL=true
+    username: root
+    password: linhf
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    connectionProperties: druid.stat.mergeSql=true
+mybatis:
+  type-aliases-package: com.zhenglin.tradeplatform.model
+  mapper-locations: classpath:mappers/*.xml  
+server:
+  port: 0
+grpc:
+  server:
+    port: 9898
